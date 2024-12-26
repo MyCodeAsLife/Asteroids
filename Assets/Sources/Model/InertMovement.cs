@@ -1,21 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Asteroids.Model
 {
-    public class InertMovement : MonoBehaviour
+    public class InertMovement
     {
-        // Start is called before the first frame update
-        void Start()
-        {
+        private readonly float _unitsPerSecond = 0.001f;
+        private readonly float _maxSpeed = 0.0015f;
+        private readonly float _secondToStop = 1f;
 
+        public Vector2 Acceleration { get; private set; }
+
+        public void Accelerate(Vector2 forward, float deltaTime)
+        {
+            Acceleration += forward * (_unitsPerSecond * deltaTime);
+            Acceleration = Vector2.ClampMagnitude(Acceleration, _maxSpeed);
         }
 
-        // Update is called once per frame
-        void Update()
+        public void SlowDown(float deltaTime)
         {
-
+            Acceleration -= Acceleration * (deltaTime / _secondToStop);
         }
     }
 }

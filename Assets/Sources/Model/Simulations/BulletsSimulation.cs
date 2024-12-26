@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,16 +7,14 @@ namespace Asteroids.Model
 {
     public class BulletsSimulation : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        public void Simulate(Bullet bullet, Vector2 position, Vector2 forward)
         {
-
+            throw new NotImplementedException();
         }
 
-        // Update is called once per frame
-        void Update()
+        public void Update(float deltaTime)
         {
-
+            throw new NotImplementedException();
         }
     }
 }

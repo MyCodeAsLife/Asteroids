@@ -10,7 +10,7 @@ namespace CompositeRoot
         [SerializeField] private BulletsViewFactory _bulletsViewFactory;
         [SerializeField] private Camera _camera;
 
-        private ShipCompositeRoot _shipModel;
+        private Ship _shipModel;
         private ShipInputRouter _shipInputRouter;
         private ShipMovement _shipMovement;
         private DefaultGun _baseGun;

@@ -28,10 +28,37 @@ public partial class @ShipInput: IInputActionCollection2, IDisposable
             ""id"": ""269a267c-88db-43ed-aa5b-d516f2d94a2c"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
-                    ""type"": ""Value"",
+                    ""name"": ""MoveForward"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""1635474c-136f-4e3b-8448-3017d3f77728"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""FirstSlotShoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""ef29ccdb-3f5c-452d-8cef-fc5e2d5a25a0"",
                     ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SecondSlotShoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""299de10f-d4f1-499c-ab45-829d6e462821"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Rotate"",
+                    ""type"": ""Value"",
+                    ""id"": ""79bf11b3-0563-45ad-a074-4827d97ade10"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -39,15 +66,114 @@ public partial class @ShipInput: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": """",
-                    ""id"": ""64c0e7b8-c3f8-4687-b585-2ddaa481d1e5"",
+                    ""name"": ""One Modifier"",
+                    ""id"": ""85c328a5-e6e1-4ccb-999d-6ca4e90a5641"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveForward"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""b75c6b9e-bb44-4cf8-874c-75f7184eb326"",
                     ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""New control scheme"",
-                    ""action"": ""Movement"",
+                    ""groups"": """",
+                    ""action"": ""MoveForward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""20adb134-829d-4d21-94e5-f4f394bdac15"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveForward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""16f7f07d-02ed-46e0-adb8-7b6a004eebdd"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FirstSlotShoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6a4263c9-acd0-42a6-8963-8214429d16d8"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SecondSlotShoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""764acd78-dde4-4b5f-ac47-37052181df41"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Two Modifiers"",
+                    ""id"": ""46621365-d707-4ce9-85da-1d95be1f3add"",
+                    ""path"": ""TwoModifiers"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier1"",
+                    ""id"": ""698a28a9-e193-4c84-913a-e4728a7c8b00"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""modifier2"",
+                    ""id"": ""5852ca79-5dd2-4ca0-bf37-586b4c397845"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""87072e7d-23f9-4df6-ade7-62ee949233b4"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -68,7 +194,10 @@ public partial class @ShipInput: IInputActionCollection2, IDisposable
 }");
         // Ship
         m_Ship = asset.FindActionMap("Ship", throwIfNotFound: true);
-        m_Ship_Movement = m_Ship.FindAction("Movement", throwIfNotFound: true);
+        m_Ship_MoveForward = m_Ship.FindAction("MoveForward", throwIfNotFound: true);
+        m_Ship_FirstSlotShoot = m_Ship.FindAction("FirstSlotShoot", throwIfNotFound: true);
+        m_Ship_SecondSlotShoot = m_Ship.FindAction("SecondSlotShoot", throwIfNotFound: true);
+        m_Ship_Rotate = m_Ship.FindAction("Rotate", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -130,12 +259,18 @@ public partial class @ShipInput: IInputActionCollection2, IDisposable
     // Ship
     private readonly InputActionMap m_Ship;
     private List<IShipActions> m_ShipActionsCallbackInterfaces = new List<IShipActions>();
-    private readonly InputAction m_Ship_Movement;
+    private readonly InputAction m_Ship_MoveForward;
+    private readonly InputAction m_Ship_FirstSlotShoot;
+    private readonly InputAction m_Ship_SecondSlotShoot;
+    private readonly InputAction m_Ship_Rotate;
     public struct ShipActions
     {
         private @ShipInput m_Wrapper;
         public ShipActions(@ShipInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Ship_Movement;
+        public InputAction @MoveForward => m_Wrapper.m_Ship_MoveForward;
+        public InputAction @FirstSlotShoot => m_Wrapper.m_Ship_FirstSlotShoot;
+        public InputAction @SecondSlotShoot => m_Wrapper.m_Ship_SecondSlotShoot;
+        public InputAction @Rotate => m_Wrapper.m_Ship_Rotate;
         public InputActionMap Get() { return m_Wrapper.m_Ship; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -145,16 +280,34 @@ public partial class @ShipInput: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_ShipActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_ShipActionsCallbackInterfaces.Add(instance);
-            @Movement.started += instance.OnMovement;
-            @Movement.performed += instance.OnMovement;
-            @Movement.canceled += instance.OnMovement;
+            @MoveForward.started += instance.OnMoveForward;
+            @MoveForward.performed += instance.OnMoveForward;
+            @MoveForward.canceled += instance.OnMoveForward;
+            @FirstSlotShoot.started += instance.OnFirstSlotShoot;
+            @FirstSlotShoot.performed += instance.OnFirstSlotShoot;
+            @FirstSlotShoot.canceled += instance.OnFirstSlotShoot;
+            @SecondSlotShoot.started += instance.OnSecondSlotShoot;
+            @SecondSlotShoot.performed += instance.OnSecondSlotShoot;
+            @SecondSlotShoot.canceled += instance.OnSecondSlotShoot;
+            @Rotate.started += instance.OnRotate;
+            @Rotate.performed += instance.OnRotate;
+            @Rotate.canceled += instance.OnRotate;
         }
 
         private void UnregisterCallbacks(IShipActions instance)
         {
-            @Movement.started -= instance.OnMovement;
-            @Movement.performed -= instance.OnMovement;
-            @Movement.canceled -= instance.OnMovement;
+            @MoveForward.started -= instance.OnMoveForward;
+            @MoveForward.performed -= instance.OnMoveForward;
+            @MoveForward.canceled -= instance.OnMoveForward;
+            @FirstSlotShoot.started -= instance.OnFirstSlotShoot;
+            @FirstSlotShoot.performed -= instance.OnFirstSlotShoot;
+            @FirstSlotShoot.canceled -= instance.OnFirstSlotShoot;
+            @SecondSlotShoot.started -= instance.OnSecondSlotShoot;
+            @SecondSlotShoot.performed -= instance.OnSecondSlotShoot;
+            @SecondSlotShoot.canceled -= instance.OnSecondSlotShoot;
+            @Rotate.started -= instance.OnRotate;
+            @Rotate.performed -= instance.OnRotate;
+            @Rotate.canceled -= instance.OnRotate;
         }
 
         public void RemoveCallbacks(IShipActions instance)
@@ -183,6 +336,9 @@ public partial class @ShipInput: IInputActionCollection2, IDisposable
     }
     public interface IShipActions
     {
-        void OnMovement(InputAction.CallbackContext context);
+        void OnMoveForward(InputAction.CallbackContext context);
+        void OnFirstSlotShoot(InputAction.CallbackContext context);
+        void OnSecondSlotShoot(InputAction.CallbackContext context);
+        void OnRotate(InputAction.CallbackContext context);
     }
 }

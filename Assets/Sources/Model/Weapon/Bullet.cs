@@ -1,21 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace Asteroids.Model
 {
-    public class Bullet : MonoBehaviour
+    public abstract class Bullet
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        public readonly float LifeTime;
+        public readonly float Speed;
 
-        // Update is called once per frame
-        void Update()
+        protected Bullet(float lifeTime, float speed)
         {
-        
+            LifeTime = lifeTime;
+            Speed = speed;
         }
+    }
+
+    public class LaserGunBullet : Bullet
+    {
+        public LaserGunBullet() : base(0.5f, 0f) { }                    // Magic
+    }
+
+    public class DefaultBullet : Bullet
+    {
+        public DefaultBullet() : base(10f, 0.6f) { }                    // Magic
     }
 }

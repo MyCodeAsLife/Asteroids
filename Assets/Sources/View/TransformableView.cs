@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Asteroids
 {
-    internal class TransformableView : MonoBehaviour
+    public class TransformableView : MonoBehaviour
     {
         private Camera _camera;
         private Transformable _model;
